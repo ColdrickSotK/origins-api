@@ -1,0 +1,100 @@
+---
+techs:
+
+  - foraging:
+      display-name: Foraging
+      description: >
+        The ability to find useful things from the surroundings.
+      reqs: []
+
+  - binding:
+      display-name: Bindings
+      description: >
+        The knowledge of how to usefully tie things together
+      reqs:
+        - foraging
+  - fire:
+      display-name: Fire
+      description: >
+        Mastery of nature's most destructive force.
+      reqs:
+        - foraging
+  - spear:
+      display-name: Spears
+      description: >
+        The art of sharpening sticks.
+      reqs:
+        - foraging
+  - stonecraft:
+      display-name: Stonecraft
+      description: >
+        The skill of working with small stones.
+      reqs:
+        - foraging
+  - trapping:
+      display-name: Trapping
+      description: >
+        The basics of digging big holes for things to fall into.
+      reqs:
+        - foraging
+
+  - butchery:
+      display-name: Butchery
+      description: >
+        The ability to do something useful with dead things.
+      reqs:
+        - stonecraft
+        - trapping
+  - construction:
+      display-name: Construction
+      description: >
+        The crafting of shelter using available materials.
+      reqs:
+        - binding
+        - fire
+        - stonecraft
+  - cookery:
+      display-name: Cookery
+      description: >
+        Things taste better warmed up.
+      reqs:
+        - fire
+  - flint:
+      display-name: Flint Working
+      description: >
+        The knowledge of how to turn useless rocks into powerful tools.
+      reqs:
+        - stonecraft
+  - hunting:
+      display-name: Hunting
+      description: >
+        The organised killing of wild animals for food and resources.
+      reqs:
+        - spear
+        - trapping
+  - stoneworking:
+      display-name: Stoneworking
+      description: >
+        The art of turning rubble into useful stones.
+      reqs:
+        - stonecraft
+  - woodcutting:
+      display-name: Woodcutting
+      description: >
+        The knowledge and skills required to fell the largest of trees.
+      reqs:
+        - stonecraft
+
+  - agriculture:
+      display-name: Agriculture
+      description: >
+        The clearance and cultivation of land to produce food.
+      reqs:
+        - hunting
+        - woodcutting
+  - carpentry:
+      display-name: Carpentry
+      description: >
+        The art of doing useful things with big bits of wood.
+      reqs:
+        - woodcutting
