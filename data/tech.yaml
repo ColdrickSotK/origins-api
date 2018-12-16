@@ -17,6 +17,7 @@ techs:
       display-name: Fire
       description: >
         Mastery of nature's most destructive force.
+      icon: images/tech/fire.png
       reqs:
         - foraging
   - spear:
@@ -63,6 +64,7 @@ techs:
       display-name: Flint Working
       description: >
         The knowledge of how to turn useless rocks into powerful tools.
+      icon: images/tech/flint.png
       reqs:
         - stonecraft
   - hunting:

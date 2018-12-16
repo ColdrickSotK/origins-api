@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from flask import Flask
+from flask import Flask, send_from_directory
 from flask_restful import Api
 
 from origins.api.v1.tech import TechTree
@@ -21,6 +21,10 @@ app = Flask(__name__)
 api = Api(app)
 
 api.add_resource(TechTree, '/v1/tech')
+
+@app.route('/images/<path:path>')
+def send_image(path):
+    return send_from_directory('../images', path)
 
 if __name__ == "__main__":
     app.run(debug=True)
