@@ -16,12 +16,16 @@ from flask import Flask, send_from_directory
 from flask_cors import CORS
 from flask_restful import Api
 
+from origins.api.v1.settlements import Settlement
+from origins.api.v1.settlements import SettlementList
 from origins.api.v1.tech import TechTree
 
 app = Flask(__name__)
 CORS(app)
 api = Api(app)
 
+api.add_resource(SettlementList, '/v1/settlement', '/v1/settlement/')
+api.add_resource(Settlement, '/v1/settlement/<int:settlement_id>')
 api.add_resource(TechTree, '/v1/tech')
 
 @app.route('/images/<path:path>')
