@@ -24,6 +24,12 @@ for tech in techtree:
     for name, spec in tech.items():
         TECHS[name] = spec
 
+for name, spec in TECHS.items():
+    spec['children'] = [
+        tech for tech, detail in TECHS.items()
+        if name in detail['reqs']
+    ]
+
 
 class TechTree(Resource):
     def get(self):
