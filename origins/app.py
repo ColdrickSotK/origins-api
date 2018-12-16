@@ -13,11 +13,13 @@
 # limitations under the License.
 
 from flask import Flask, send_from_directory
+from flask_cors import CORS
 from flask_restful import Api
 
 from origins.api.v1.tech import TechTree
 
 app = Flask(__name__)
+CORS(app)
 api = Api(app)
 
 api.add_resource(TechTree, '/v1/tech')
